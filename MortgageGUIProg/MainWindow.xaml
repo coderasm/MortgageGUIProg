@@ -6,7 +6,21 @@
         xmlns:local="clr-namespace:MortgageGUIProg"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+  <Grid>
+    <TextBox HorizontalAlignment="Left" Height="23" Margin="155,41,0,0" TextWrapping="Wrap" Text="{Binding Principle}" VerticalAlignment="Top" Width="120"/>
+    <TextBox HorizontalAlignment="Left" Height="23" Margin="291,41,0,0" TextWrapping="Wrap" Text="{Binding Rate}" VerticalAlignment="Top" Width="120"/>
+    <TextBox HorizontalAlignment="Left" Height="23" Margin="428,41,0,0" TextWrapping="Wrap" Text="{Binding Term}" VerticalAlignment="Top" Width="120"/>
+    <Label Content="Principle" HorizontalAlignment="Left" Margin="155,10,0,0" VerticalAlignment="Top"/>
+    <Label Content="Rate" HorizontalAlignment="Left" Margin="291,10,0,0" VerticalAlignment="Top"/>
+    <Label Content="Term" HorizontalAlignment="Left" Margin="428,10,0,0" VerticalAlignment="Top"/>
+    <Button Content="Submit" HorizontalAlignment="Left" Margin="564,43,0,0" VerticalAlignment="Top" Width="75" Click="Submit"/>
+    <DataGrid ItemsSource="{Binding Payments}" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="340" Margin="155,69,0,0" VerticalAlignment="Top" Width="484">
+      <DataGrid.Columns>
+        <DataGridTextColumn Header="Begin Balance"  Binding="{Binding BeginBalance, StringFormat=C}"/>
+        <DataGridTextColumn Header="Rate Payment"  Binding="{Binding RatePayment, StringFormat=C}"/>
+        <DataGridTextColumn Header="Monthly Payment"  Binding="{Binding MonthlyPayment, StringFormat=C}"/>
+        <DataGridTextColumn Header="End Balance"  Binding="{Binding EndBalance, StringFormat=C}"/>
+      </DataGrid.Columns>
+    </DataGrid>
+  </Grid>
 </Window>

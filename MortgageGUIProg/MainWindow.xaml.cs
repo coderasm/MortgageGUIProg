@@ -20,9 +20,17 @@ namespace MortgageGUIProg
   /// </summary>
   public partial class MainWindow : Window
   {
+    MortgageModel model = new MortgageModel();
+
     public MainWindow()
     {
       InitializeComponent();
+      DataContext = model;
+    }
+
+    private void Submit(object sender, RoutedEventArgs e)
+    {
+      model.Evaluate();
     }
   }
 }
