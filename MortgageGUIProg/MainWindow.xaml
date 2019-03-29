@@ -7,9 +7,9 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
   <Grid>
-    <TextBox HorizontalAlignment="Left" Height="23" Margin="155,41,0,0" TextWrapping="Wrap" Text="{Binding Principle}" VerticalAlignment="Top" Width="120"/>
-    <TextBox HorizontalAlignment="Left" Height="23" Margin="291,41,0,0" TextWrapping="Wrap" Text="{Binding Rate}" VerticalAlignment="Top" Width="120"/>
-    <TextBox HorizontalAlignment="Left" Height="23" Margin="428,41,0,0" TextWrapping="Wrap" Text="{Binding Term}" VerticalAlignment="Top" Width="120"/>
+    <TextBox HorizontalAlignment="Left" Height="23" Margin="155,41,0,0" TextWrapping="Wrap" Text="{Binding Principle, Mode=OneWayToSource}" VerticalAlignment="Top" Width="120"/>
+    <TextBox HorizontalAlignment="Left" Height="23" Margin="291,41,0,0" TextWrapping="Wrap" Text="{Binding Rate, Mode=OneWayToSource}" VerticalAlignment="Top" Width="120"/>
+    <TextBox HorizontalAlignment="Left" Height="23" Margin="428,41,0,0" TextWrapping="Wrap" Text="{Binding Term, Mode=OneWayToSource}" VerticalAlignment="Top" Width="120"/>
     <Label Content="Principle" HorizontalAlignment="Left" Margin="155,10,0,0" VerticalAlignment="Top"/>
     <Label Content="Rate" HorizontalAlignment="Left" Margin="291,10,0,0" VerticalAlignment="Top"/>
     <Label Content="Term" HorizontalAlignment="Left" Margin="428,10,0,0" VerticalAlignment="Top"/>
